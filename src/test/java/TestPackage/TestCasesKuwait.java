@@ -1,54 +1,55 @@
 package TestPackage;
 
 import Pages.Countries.Bahrain;
+import Pages.Countries.Kuwait;
 import com.shaft.driver.SHAFT;
 import jdk.jfr.Description;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TestCasesBahrian {
+public class TestCasesKuwait {
     SHAFT.GUI.WebDriver driver;
-  Bahrain bahrain;
+ Kuwait kuwait;
 
 
     @BeforeClass
     public void beforeClass() {
         driver = new SHAFT.GUI.WebDriver();
 
-        bahrain = new Bahrain(driver);
+        kuwait = new Kuwait(driver);
 
     }
 
-    @Description("Validate Lite Package for Bahrain Country ")
+    @Description("Validate Lite Package for Kuwait Country ")
     @Test(priority = 0)
-    public void ValidateLitePackage() {
-        //new Bahrain(driver).openUrl();
+    public void ValidateLitePackageForKuwait() {
 
-        bahrain.openUrl();
-        bahrain.assertSubscriptionTypeLite();
-        bahrain.assertSubscriptionPriceLite();
-        bahrain.assertSubscriptionCurrencyLite();
+
+        kuwait.openUrl();
+        kuwait.assertSubscriptionTypeLite();
+        kuwait.assertSubscriptionPriceLite();
+        kuwait.assertSubscriptionCurrencyLite();
 
     }
-    @Description("Validate Basic Package for Bahrain Country ")
+    @Description("Validate Basic Package for Kuwait Country ")
     @Test(priority = 1)
-    public void ValidateBasicPackage() {
-        //new Bahrain(driver).openUrl();
+    public void ValidateBasicPackageForKuwait() {
 
-        bahrain.assertSubscriptionTypeBasic();
-        bahrain.assertSubscriptionPriceBasic();
-        bahrain.assertSubscriptionCurrencyBasic();
+
+        kuwait.assertSubscriptionTypeBasic();
+        kuwait.assertSubscriptionPriceBasic();
+        kuwait.assertSubscriptionCurrencyBasic();
 
     }
 
-    @Description("Validate Premium Package for Bahrain Country ")
+    @Description("Validate Premium Package for Kuwait Country ")
     @Test(priority = 2)
-    public void ValidatePremiumPackage() {
-        //new Bahrain(driver).openUrl();
+    public void ValidatePremiumPackageForKuwait() {
 
-        bahrain.assertSubscriptionTypePremium();
-        bahrain.assertSubscriptionPricePremium();
-        bahrain.assertSubscriptionCurrencyPremium();
+
+        kuwait.assertSubscriptionTypePremium();
+        kuwait.assertSubscriptionPricePremium();
+        kuwait.assertSubscriptionCurrencyPremium();
 
     }
 }

@@ -1,54 +1,55 @@
 package TestPackage;
 
 import Pages.Countries.Bahrain;
+import Pages.Countries.SaudiArabia;
 import com.shaft.driver.SHAFT;
 import jdk.jfr.Description;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-public class TestCasesBahrian {
+public class TestCasesSaudiArabia {
     SHAFT.GUI.WebDriver driver;
-  Bahrain bahrain;
+  SaudiArabia saudiArabia;
 
 
     @BeforeClass
     public void beforeClass() {
         driver = new SHAFT.GUI.WebDriver();
 
-        bahrain = new Bahrain(driver);
+        saudiArabia = new SaudiArabia(driver);
 
     }
 
-    @Description("Validate Lite Package for Bahrain Country ")
+    @Description("Validate Lite Package for SaudiArabia Country ")
     @Test(priority = 0)
-    public void ValidateLitePackage() {
-        //new Bahrain(driver).openUrl();
+    public void ValidateLitePackageForSaudiArabia() {
 
-        bahrain.openUrl();
-        bahrain.assertSubscriptionTypeLite();
-        bahrain.assertSubscriptionPriceLite();
-        bahrain.assertSubscriptionCurrencyLite();
+
+        saudiArabia.openUrl();
+        saudiArabia.assertSubscriptionTypeLite();
+        saudiArabia.assertSubscriptionPriceLite();
+        saudiArabia.assertSubscriptionCurrencyLite();
 
     }
-    @Description("Validate Basic Package for Bahrain Country ")
+    @Description("Validate Basic Package for Saudi Arabia Country ")
     @Test(priority = 1)
-    public void ValidateBasicPackage() {
-        //new Bahrain(driver).openUrl();
+    public void ValidateBasicPackageForSaudiArabia() {
 
-        bahrain.assertSubscriptionTypeBasic();
-        bahrain.assertSubscriptionPriceBasic();
-        bahrain.assertSubscriptionCurrencyBasic();
+
+        saudiArabia.assertSubscriptionTypeBasic();
+        saudiArabia.assertSubscriptionPriceBasic();
+        saudiArabia.assertSubscriptionCurrencyBasic();
 
     }
 
-    @Description("Validate Premium Package for Bahrain Country ")
+    @Description("Validate Premium Package for Saudi Arabia Country ")
     @Test(priority = 2)
-    public void ValidatePremiumPackage() {
-        //new Bahrain(driver).openUrl();
+    public void ValidatePremiumPackageForSaudiArabia() {
 
-        bahrain.assertSubscriptionTypePremium();
-        bahrain.assertSubscriptionPricePremium();
-        bahrain.assertSubscriptionCurrencyPremium();
+
+        saudiArabia.assertSubscriptionTypePremium();
+        saudiArabia.assertSubscriptionPricePremium();
+        saudiArabia.assertSubscriptionCurrencyPremium();
 
     }
 }

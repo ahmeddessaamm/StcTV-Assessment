@@ -4,7 +4,7 @@ import com.shaft.driver.SHAFT;
 import com.shaft.validation.Validations;
 import org.openqa.selenium.By;
 
-public class Bahrain {
+public class SaudiArabia {
 
 
     private final By SubscriptionTypeLite = By.id("name-لايت");
@@ -22,15 +22,15 @@ public class Bahrain {
     private final By SubscriptionPricePremium = By.xpath("//div[@class='price' and @id='currency-بريميوم']/b ");
     private final By SubscriptionCurrencyPremium = By.xpath("//div[@class='price' and @id='currency-بريميوم']/i ");
     SHAFT.GUI.WebDriver driver;
-    String url = "https://subscribe.stctv.com/bh-ar";
+    String url = "https://subscribe.stctv.com/sa-ar";
 
     //Constructor for the homepage
-    public Bahrain(SHAFT.GUI.WebDriver driver) {
+    public SaudiArabia(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
 
     //navigating to the website url and asserting that the url is correct
-    public Bahrain openUrl() {
+    public SaudiArabia openUrl() {
         driver.browser().navigateToURL(url);
         return this;
     }
@@ -42,30 +42,30 @@ public class Bahrain {
     }
 
     public void assertSubscriptionPriceLite() {
-        Validations.assertThat().element( SubscriptionPriceLite).text().isEqualTo(2).perform();
+        Validations.assertThat().element( SubscriptionPriceLite).text().isEqualTo(15).perform();
     }
     public void assertSubscriptionCurrencyLite() {
-        Validations.assertThat().element( SubscriptionCurrencyLite).text().contains("دينار بحريني").perform();
+        Validations.assertThat().element( SubscriptionCurrencyLite).text().contains("ريال سعودي").perform();
     }
 
     public void assertSubscriptionTypeBasic() {
         Validations.assertThat().element( SubscriptionTypeBasic).text().isEqualTo("الأساسية").perform();
     }
     public void assertSubscriptionPriceBasic() {
-        Validations.assertThat().element( SubscriptionPriceBasic).text().isEqualTo(3).perform();
+        Validations.assertThat().element( SubscriptionPriceBasic).text().isEqualTo(25).perform();
     }
     public void assertSubscriptionCurrencyBasic() {
-        Validations.assertThat().element( SubscriptionCurrencyBasic).text().contains("دينار بحريني").perform();
+        Validations.assertThat().element( SubscriptionCurrencyBasic).text().contains("ريال سعودي").perform();
     }
 
     public void assertSubscriptionTypePremium() {
         Validations.assertThat().element( SubscriptionTypePremium).text().isEqualTo("بريميوم").perform();
     }
     public void assertSubscriptionPricePremium() {
-        Validations.assertThat().element( SubscriptionPricePremium).text().isEqualTo(6).perform();
+        Validations.assertThat().element( SubscriptionPricePremium).text().isEqualTo(60).perform();
     }
     public void assertSubscriptionCurrencyPremium() {
-        Validations.assertThat().element( SubscriptionCurrencyPremium).text().contains("دينار بحريني").perform();
+        Validations.assertThat().element( SubscriptionCurrencyPremium).text().contains("ريال سعودي").perform();
     }
 }
 

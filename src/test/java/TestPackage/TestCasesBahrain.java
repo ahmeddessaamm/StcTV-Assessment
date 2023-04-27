@@ -22,7 +22,7 @@ public class TestCasesBahrain {
     @Description("Validate Lite Package for Bahrain Country ")
     @Test(priority = 0)
     public void ValidateLitePackageForBahrain() {
-        //new Bahrain(driver).openUrl();
+
 
         bahrain.openUrl();
         bahrain.assertSubscriptionTypeLite();
@@ -33,7 +33,7 @@ public class TestCasesBahrain {
     @Description("Validate Basic Package for Bahrain Country ")
     @Test(priority = 1)
     public void ValidateBasicPackageForBahrain() {
-        //new Bahrain(driver).openUrl();
+
 
         bahrain.assertSubscriptionTypeBasic();
         bahrain.assertSubscriptionPriceBasic();
@@ -44,7 +44,7 @@ public class TestCasesBahrain {
     @Description("Validate Premium Package for Bahrain Country ")
     @Test(priority = 2)
     public void ValidatePremiumPackageForBahrain() {
-        //new Bahrain(driver).openUrl();
+
 
         bahrain.assertSubscriptionTypePremium();
         bahrain.assertSubscriptionPricePremium();
