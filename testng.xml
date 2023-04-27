@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="ValidateSubscriptionPackages">
+    <test name="ValidateSubscriptionsForDifferentCountries">
+        <classes>
+            <class name="TestPackage.TestCasesBahrain"/>
+            <class name="TestPackage.TestCasesSaudiArabia"/>
+            <class name="TestPackage.TestCasesKuwait"/>
+        </classes>
+    </test>
+
+</suite>
